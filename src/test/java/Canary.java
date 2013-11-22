@@ -6,9 +6,9 @@ import org.junit.Test;
 
 public class Canary {
 
-       @Test
-       public void canary() {
-               assertThat(true, is(equalTo(true)));
-       }
+	@Test
+	public void canary() {
+		assertThat(true, is(equalTo(true)));
+	}
 
 }

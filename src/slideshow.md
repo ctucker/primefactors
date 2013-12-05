@@ -11,7 +11,9 @@ Check out the repo from:
 .large-code[`http://github.com/ctucker/primefactors.git`]
 
 * Import into Eclipse in the usual fashion
-* ... or open as a new project in IntelliJ
+* ... or import as a new project in IntelliJ
+
+There are both Java and JS versions to play with.
 
 ---
 

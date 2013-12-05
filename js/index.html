@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Prime Factors Calculator</title>
+    <link rel="stylesheet" type="text/css" href="lib/bootstrap.css"/>
+    <link rel="stylesheet" type="text/css" href="lib/bootstrap-theme.css"/>
+    <script src="lib/angular.min.js"></script>
+    <script src="main/canary.js"></script>
+    <script src="main/primefactors.js"></script>
+
+    <script language="javascript">
+        function PrimeFactors($scope) {
+            $scope.calculate = function() {
+                $scope.targetValue = $scope.num;
+                $scope.factors = primefactors($scope.num);
+            };
+        }
+    </script>
+
+</head>
+<body ng-app ng-cloak ng-controller="PrimeFactors" class="container">
+
+<h1>Prime Factors Calculator</h1>
+<form class="form-inline" ng-submit="calculate()">
+    <label>
+        <input type="text" ng-model="num">
+        <button type="button" class="btn btn-primary">Go!</button>
+    </label>
+</form>
+<div class="lead" ng-show="targetValue">
+    <span ng-repeat="factor in factors track by $index">{{factor}} <span ng-hide="$last">* </span></span> = {{ targetValue }}
+</div>
+
+</body>
+</html>
